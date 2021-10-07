@@ -1,0 +1,38 @@
+/* idenity color */
+:root {
+  --biggest-font-size: 32px;
+  --h2-font-size: 20px;
+  --h3-font-size: 18px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --smaller-font-size: 12px;
+  --mb-8: 8px;
+  --mb-12: 12px;
+  --mb-16: 16px;
+  --mb-24: 24px;
+  --mb-32: 32px;
+  --red-color: #ff3150;
+  --white-color: #fff;
+  --yellow-color: #ffc400;
+  --main-color: #19283f;
+  --light-color: #a8b9c0;
+  --lighter-color: #c5d0d5;
+  --idenity-color: #33d1cc;
+  --second-background-color: #eff7fa;
+}
+@media (min-width: 991px) {
+  :root {
+    --biggest-font-size: 48px;
+    --h2-font-size: 28px;
+    --h3-font-size: 20px;
+    --normal-font-size: 18px;
+    --small-font-size: 16px;
+    --smaller-font-size: 14px;
+  }
+}
+
+/** experimental grid mixins **/
+/** experimental grid mixins **/
+body {
+  font-family: "Roboto", sans-serif;
+}/*# sourceMappingURL=main.css.map */

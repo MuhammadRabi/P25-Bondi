@@ -1,0 +1,36 @@
+/** experimental grid mixins **/
+
+@mixin grid-12 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+}
+
+@mixin grid-6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+@mixin grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@mixin grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+}
+
+@mixin grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+/** experimental grid mixins **/
+
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

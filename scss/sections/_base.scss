@@ -1,0 +1,10 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+body {
+  font-family: "Roboto", sans-serif;
+}
