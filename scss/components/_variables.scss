@@ -33,11 +33,15 @@ $contentMargin: 50px;
     --smaller-font-size: 14px;
   }
 
+  --capitalize: capitalize;
+
   --mb-8: 8px;
   --mb-12: 12px;
   --mb-16: 16px;
   --mb-24: 24px;
   --mb-32: 32px;
+  --mb-64: 64px;
+  --mb-100: 100px;
   // colors
   --red-color: #ff3150;
   --white-color: #fff;
@@ -45,6 +49,8 @@ $contentMargin: 50px;
   --main-color: #19283f;
   --light-color: #a8b9c0;
   --lighter-color: #c5d0d5;
-  --idenity-color: #33d1cc;
+  --idenity-color-3: #06a2a2;
+  --idenity-color-2: #00c6bf;
+  --idenity-color-1: #33d1cc;
   --second-background-color: #eff7fa;
 }

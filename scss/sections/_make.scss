@@ -1,0 +1,52 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+.make {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  background-color: var(--second-background-color);
+  .gallery-list {
+    margin-top: var(--mb-64);
+    display: flex;
+    justify-content: center;
+    a {
+      display: block;
+      margin: 1px 5px;
+      padding: 7px 15px;
+      text-transform: capitalize;
+      color: var(--light-color);
+      border-radius: 10px;
+      transition: $mainTransition;
+      &.active,
+      &:hover {
+        background-color: var(--red-color);
+        color: var(--yellow-color);
+      }
+    }
+  }
+  .gallery {
+    margin-top: var(--mb-32);
+    figure {
+      margin-bottom: var(--mb-24);
+      display: flex;
+      position: relative;
+      cursor: pointer;
+      &:hover .overlay {
+        background-color: rgba(51, 209, 204, 1);
+      }
+      .overlay {
+        @include overlay;
+        background-color: transparent;
+        transition: $mainTransition;
+      }
+    }
+  }
+  .button {
+    width: 15%;
+    margin: auto;
+  }
+}

@@ -4,3 +4,79 @@
 @use "../components/breakpoints" as *;
 @use "../components/mixins" as *;
 @use "../components/buttons" as *;
+
+header {
+  /* background-color: var(--main-color);*/
+  height: 0;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+    .logo {
+      width: 20%;
+    }
+    nav {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      ul {
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+        border-right: solid 2px var(--idenity-color-3);
+        li {
+          a {
+            display: block;
+            color: var(--light-color);
+            text-transform: capitalize;
+            padding: 5px 1px;
+            transition: $mainTransition;
+            font-size: 15px;
+            &.active,
+            &:hover {
+              color: var(--idenity-color-3);
+            }
+          }
+        }
+      }
+    }
+    .test {
+      width: 20%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      i {
+        color: var(--idenity-color-3);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* start hero area */
+
+.hero-area {
+  background-color: var(--main-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .hero-text {
+    text-transform: capitalize;
+    text-align: center;
+    h1 {
+      color: var(--white-color);
+      font-weight: 300;
+    }
+    h5 {
+      color: var(--light-color);
+    }
+    .button {
+      width: 130px;
+      margin: auto;
+    }
+  }
+}
+
+/* end hero area */

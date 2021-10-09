@@ -1,0 +1,54 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+.good {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+
+  .feat-show {
+    margin-top: 100px;
+    .feat-item {
+      margin-bottom: 50px;
+      text-align: center;
+      position: relative;
+      padding: 25px;
+      p {
+        font-size: 15px;
+      }
+      &.one:before {
+        content: "1";
+      }
+      &.two:before {
+        content: "2";
+      }
+      &.three:before {
+        content: "3";
+      }
+      &:before {
+        position: absolute;
+        color: var(--second-background-color);
+        font-size: 150px;
+        font-weight: bold;
+        top: -100px;
+        left: 155px;
+        z-index: -1;
+      }
+      i {
+        font-size: 36px;
+        color: var(--idenity-color-1);
+        margin-bottom: var(--mb-16);
+      }
+      h5 {
+        color: var(--yellow-color);
+        font-weight: 600;
+      }
+      p {
+        color: var(--lighter-color);
+      }
+    }
+  }
+}
