@@ -12,6 +12,7 @@ $grid-breakpoints: (
 /* idenity color */
 
 $mainTransition: 0.5s ease-in-out;
+$secondTransition: 0.2s ease-in-out;
 $sectionPadding: 50px;
 $contentMargin: 50px;
 
@@ -20,9 +21,9 @@ $contentMargin: 50px;
   --biggest-font-size: 32px;
   --h2-font-size: 20px;
   --h3-font-size: 18px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
-  --smaller-font-size: 12px;
+  --normal-font-size: 15px;
+  --small-font-size: 12px;
+  --smaller-font-size: 14px;
 
   @media (min-width: 991px) {
     --biggest-font-size: 48px;

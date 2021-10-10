@@ -3,9 +3,9 @@
   --biggest-font-size: 32px;
   --h2-font-size: 20px;
   --h3-font-size: 18px;
-  --normal-font-size: 16px;
-  --small-font-size: 14px;
-  --smaller-font-size: 12px;
+  --normal-font-size: 15px;
+  --small-font-size: 12px;
+  --smaller-font-size: 14px;
   --capitalize: capitalize;
   --mb-8: 8px;
   --mb-12: 12px;
@@ -95,6 +95,12 @@ h1 {
   margin-bottom: 10px;
 }
 
+p {
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--light-color);
+}
+
 .main-heading {
   text-align: center;
   width: 50%;
@@ -111,8 +117,8 @@ h1 {
 }
 .main-heading p {
   color: var(--light-color);
-  font-size: 15px;
   position: relative;
+  margin-bottom: var(--mb-64);
 }
 .main-heading p:after {
   content: "";
@@ -178,18 +184,20 @@ header .container .test i {
   justify-content: center;
   align-items: center;
 }
-.hero-area .hero-text {
+
+.hero-text {
   text-transform: capitalize;
   text-align: center;
 }
-.hero-area .hero-text h1 {
+.hero-text h1,
+.hero-text h2 {
   color: var(--white-color);
   font-weight: 300;
 }
-.hero-area .hero-text h5 {
+.hero-text h5 {
   color: var(--light-color);
 }
-.hero-area .hero-text .button {
+.hero-text .button {
   width: 130px;
   margin: auto;
 }
@@ -294,6 +302,232 @@ header .container .test i {
 .stuff {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.stuff article {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  color: var(--light-color);
+}
+.stuff .row {
+  margin-top: var(--mb-100);
+  justify-content: space-around;
+  align-items: center;
+}
+.stuff .content {
+  padding: 10px 75px;
+}
+.stuff .content p {
+  margin-bottom: var(--mb-16);
+}
+.stuff .button {
+  width: 30%;
+}
+
+.team {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--second-background-color);
+}
+.team .main-heading h2 {
+  color: var(--yellow-color);
+}
+.team figure {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--mb-16);
+  overflow: hidden;
+}
+.team figure img {
+  transition: 0.2s ease-in-out;
+}
+.team figure img:hover {
+  transform: scale(1.05);
+}
+.team figure figcaption {
+  position: relative;
+  background-color: var(--white-color);
+  padding: 8px 35px 15px;
+  text-align: center;
+}
+.team figure figcaption h3 {
+  position: relative;
+  color: var(--white-color);
+  font-size: 20px;
+  z-index: 1;
+}
+.team figure figcaption p {
+  font-size: var(--smaller-font-size);
+}
+.team figure figcaption .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #33d1cc;
+  height: 40px;
+  width: 100%;
+}
+
+.sponser {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.sponser img {
+  margin-bottom: var(--mb-32);
+}
+
+.project {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--main-color);
+}
+.project h2 {
+  font-size: 36px;
+}
+.project .button {
+  padding: 7px 20px;
+}
+
+.blog {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.blog .button {
+  width: 15%;
+  margin: auto;
+}
+.blog figure {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  margin-bottom: var(--mb-16);
+}
+.blog figure:hover {
+  transform: translateY(-10px);
+}
+.blog figure figcaption {
+  padding-top: var(--mb-8);
+}
+.blog figure figcaption h6 {
+  color: var(--light-color);
+}
+.blog figure figcaption h4 {
+  font-weight: 600;
+}
+
+.subscribe {
+  padding: var(--mb-16);
+  background-color: var(--yellow-color);
+}
+.subscribe .container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.subscribe h3 {
+  color: var(--main-color);
+  font-weight: 500;
+  margin-top: var(--mb-16);
+}
+.subscribe input {
+  text-transform: capitalize;
+  border: transparent;
+}
+.subscribe input:focus {
+  outline: none;
+}
+.subscribe input[type=text] {
+  width: 40%;
+  padding: 13px;
+  border-bottom: 1px solid var(--white-color);
+  color: var(--white-color);
+  background-color: transparent;
+}
+.subscribe input[type=text]::placeholder {
+  color: var(--white-color);
+}
+.subscribe input[type=submit] {
+  color: var(--yellow-color);
+  background-color: var(--main-color);
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 15px;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+footer {
+  background-color: var(--main-color);
+  padding: var(--mb-32);
+}
+footer article {
+  font-size: var(--smaller-font-size);
+}
+footer article span:first-of-type {
+  color: var(--idenity-color-3);
+}
+footer article span:last-of-type {
+  color: var(--yellow-color);
+}
+footer article p {
+  margin-top: var(--mb-16);
+}
+footer article p:last-of-type {
+  margin-top: var(--mb-64);
+}
+footer h5 {
+  color: var(--white-color);
+  margin-bottom: var(--mb-8);
+}
+footer .list-sec {
+  display: flex;
+  justify-content: space-around;
+}
+footer .list-sec ul li a {
+  display: block;
+  color: var(--light-color);
+  font-size: var(--smaller-font-size);
+  padding-bottom: var(--mb-16);
+  text-transform: capitalize;
+  transition: 0.5s ease-in-out;
+}
+footer .list-sec ul li a:hover {
+  opacity: 0.7;
+}
+footer .button {
+  width: 80%;
+  margin-top: var(--mb-16);
+}
+footer .social-icons {
+  margin-top: var(--mb-16);
+}
+footer .social-icons i {
+  color: var(--white-color);
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-left: 7px;
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+footer .social-icons i:first-of-type:hover {
+  background-color: #1877f2;
+}
+footer .social-icons i:nth-of-type(2):hover {
+  background-color: #1da1f2;
+}
+footer .social-icons i:nth-of-type(3):hover {
+  background-color: #ea4335;
+}
+footer .social-icons i:last-of-type:hover {
+  background-color: #ea4c89;
 }
 
 /*# sourceMappingURL=main.css.map */

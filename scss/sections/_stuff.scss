@@ -8,4 +8,24 @@
 .stuff {
   padding-top: $sectionPadding;
   padding-bottom: $sectionPadding;
+  article {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: var(--light-color);
+  }
+  .row {
+    margin-top: var(--mb-100);
+    justify-content: space-around;
+    align-items: center;
+  }
+  .content {
+    padding: 10px 75px;
+    p {
+      margin-bottom: var(--mb-16);
+    }
+  }
+  .button {
+    width: 30%;
+  }
 }

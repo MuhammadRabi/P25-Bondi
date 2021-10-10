@@ -1,0 +1,48 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+.team {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  background-color: var(--second-background-color);
+  .main-heading h2 {
+    color: var(--yellow-color);
+  }
+  figure {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--mb-16);
+    overflow: hidden;
+    img {
+      transition: $secondTransition;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    figcaption {
+      position: relative;
+      background-color: var(--white-color);
+      padding: 8px 35px 15px;
+      text-align: center;
+      h3 {
+        position: relative;
+        color: var(--white-color);
+        font-size: 20px;
+        z-index: 1;
+      }
+      p {
+        font-size: var(--smaller-font-size);
+      }
+      .overlay {
+        @include overlay;
+        background-color: rgba(51, 209, 204, 1);
+        height: 40px;
+        width: 100%;
+      }
+    }
+  }
+}

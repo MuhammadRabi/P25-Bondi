@@ -62,20 +62,21 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  .hero-text {
-    text-transform: capitalize;
-    text-align: center;
-    h1 {
-      color: var(--white-color);
-      font-weight: 300;
-    }
-    h5 {
-      color: var(--light-color);
-    }
-    .button {
-      width: 130px;
-      margin: auto;
-    }
+}
+.hero-text {
+  text-transform: capitalize;
+  text-align: center;
+  h1,
+  h2 {
+    color: var(--white-color);
+    font-weight: 300;
+  }
+  h5 {
+    color: var(--light-color);
+  }
+  .button {
+    width: 130px;
+    margin: auto;
   }
 }
 

@@ -1,0 +1,49 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+.subscribe {
+  padding: var(--mb-16);
+  background-color: var(--yellow-color);
+  .container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  h3 {
+    color: var(--main-color);
+    font-weight: 500;
+    margin-top: var(--mb-16);
+  }
+  input {
+    text-transform: capitalize;
+    border: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+  input[type="text"] {
+    width: 40%;
+    padding: 13px;
+    border-bottom: 1px solid var(--white-color);
+    color: var(--white-color);
+    background-color: transparent;
+    &::placeholder {
+      color: var(--white-color);
+    }
+  }
+  input[type="submit"] {
+    color: var(--yellow-color);
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+    transition: $mainTransition;
+  }
+}

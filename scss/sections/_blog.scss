@@ -1,0 +1,32 @@
+// import components scss files
+
+@use "../components/variables" as *;
+@use "../components/breakpoints" as *;
+@use "../components/mixins" as *;
+@use "../components/buttons" as *;
+
+.blog {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  .button {
+    width: 15%;
+    margin: auto;
+  }
+  figure {
+    transition: $secondTransition;
+    cursor: pointer;
+    margin-bottom: var(--mb-16);
+    &:hover {
+      transform: translateY(-10px);
+    }
+    figcaption {
+      padding-top: var(--mb-8);
+      h6 {
+        color: var(--light-color);
+      }
+      h4 {
+        font-weight: 600;
+      }
+    }
+  }
+}
