@@ -1,12 +1,11 @@
 /* idenity color */
 :root {
-  --biggest-font-size: 32px;
+  --biggest-font-size: 24px;
   --h2-font-size: 20px;
   --h3-font-size: 18px;
   --normal-font-size: 15px;
   --small-font-size: 12px;
   --smaller-font-size: 14px;
-  --capitalize: capitalize;
   --mb-8: 8px;
   --mb-12: 12px;
   --mb-16: 16px;
@@ -27,7 +26,7 @@
 }
 @media (min-width: 991px) {
   :root {
-    --biggest-font-size: 48px;
+    --biggest-font-size: 36px;
     --h2-font-size: 28px;
     --h3-font-size: 20px;
     --normal-font-size: 18px;
@@ -73,12 +72,24 @@ a.button {
   display: block;
   background-color: var(--red-color);
   color: var(--yellow-color);
-  padding: 7px 25px;
+  padding: 8px 25px;
   cursor: pointer;
   border-radius: 15px;
   text-transform: capitalize;
   font-size: 15px;
   text-align: center;
+  width: 75%;
+  margin: auto;
+}
+@media (min-width: 992px) {
+  a.button {
+    width: 15%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  a.button {
+    width: 30%;
+  }
 }
 
 h2,
@@ -103,7 +114,6 @@ p {
 
 .main-heading {
   text-align: center;
-  width: 50%;
   margin: auto;
 }
 .main-heading i {
@@ -113,25 +123,28 @@ p {
 }
 .main-heading h2 {
   color: var(--main-color);
-  font-size: 35px;
+  font-size: var(--biggest-font-size);
 }
 .main-heading p {
-  color: var(--light-color);
+  color: var(--lighter-color);
   position: relative;
   margin-bottom: var(--mb-64);
+  text-transform: uppercase;
 }
 .main-heading p:after {
   content: "";
   position: absolute;
   height: 1px;
   width: 200px;
-  left: 35%;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -20px;
   background-color: var(--idenity-color-1);
 }
 
 header {
-  /* background-color: var(--main-color);*/
+  position: relative;
+  z-index: 2;
   height: 0;
 }
 header .container {
@@ -147,6 +160,11 @@ header .container nav {
   width: 70%;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 1199.98px) {
+  header .container nav {
+    display: none;
+  }
 }
 header .container nav ul {
   display: flex;
@@ -178,14 +196,26 @@ header .container .test i {
 
 /* start hero area */
 .hero-area {
-  background-color: var(--main-color);
+  position: relative;
+  background-image: url("../../images/landing02.jpg");
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.hero-area .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 40, 63, 0.9);
+}
 
 .hero-text {
+  position: relative;
   text-transform: capitalize;
   text-align: center;
 }
@@ -197,18 +227,14 @@ header .container .test i {
 .hero-text h5 {
   color: var(--light-color);
 }
-.hero-text .button {
-  width: 130px;
-  margin: auto;
-}
 
 /* end hero area */
 .good {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .good .feat-show {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .good .feat-show .feat-item {
   margin-bottom: 50px;
@@ -233,8 +259,9 @@ header .container .test i {
   color: var(--second-background-color);
   font-size: 150px;
   font-weight: bold;
-  top: -100px;
-  left: 155px;
+  top: -77px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 .good .feat-show .feat-item i {
@@ -243,22 +270,39 @@ header .container .test i {
   margin-bottom: var(--mb-16);
 }
 .good .feat-show .feat-item h5 {
+  font-size: 20px;
   color: var(--yellow-color);
   font-weight: 600;
+  letter-spacing: 1.5px;
 }
 .good .feat-show .feat-item p {
   color: var(--lighter-color);
+  line-height: 1.6;
 }
 
 .make {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: var(--second-background-color);
 }
 .make .gallery-list {
   margin-top: var(--mb-64);
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+@media (max-width: 575.98px) {
+  .make .gallery-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .make .gallery-list li {
+    width: 35%;
+    margin: auto;
+  }
 }
 .make .gallery-list a {
   display: block;
@@ -272,6 +316,12 @@ header .container .test i {
 .make .gallery-list a.active, .make .gallery-list a:hover {
   background-color: var(--red-color);
   color: var(--yellow-color);
+}
+@media (max-width: 575.98px) {
+  .make .gallery-list a {
+    padding: 5px;
+    text-align: center;
+  }
 }
 .make .gallery {
   margin-top: var(--mb-32);
@@ -294,20 +344,22 @@ header .container .test i {
   background-color: transparent;
   transition: 0.5s ease-in-out;
 }
-.make .button {
-  width: 15%;
-  margin: auto;
-}
 
 .stuff {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .stuff article {
-  width: 100%;
+  width: 60%;
+  line-height: 1.4;
   margin: auto;
   text-align: center;
   color: var(--light-color);
+}
+@media (max-width: 991.98px) {
+  .stuff article {
+    width: 100%;
+  }
 }
 .stuff .row {
   margin-top: var(--mb-100);
@@ -317,25 +369,41 @@ header .container .test i {
 .stuff .content {
   padding: 10px 75px;
 }
+@media (max-width: 991.98px) {
+  .stuff .content {
+    padding: 10px 5px;
+  }
+}
+.stuff .content h2 {
+  font-weight: 600;
+}
 .stuff .content p {
   margin-bottom: var(--mb-16);
 }
-.stuff .button {
-  width: 30%;
+@media (min-width: 768px) {
+  .stuff .button {
+    width: 50%;
+  }
 }
 
 .team {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: var(--second-background-color);
 }
 .team .main-heading h2 {
   color: var(--yellow-color);
 }
+.team p:first-of-type {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
 .team figure {
   display: flex;
   flex-direction: column;
   margin-bottom: var(--mb-16);
+  margin-top: var(--mb-64);
   overflow: hidden;
 }
 .team figure img {
@@ -347,7 +415,7 @@ header .container .test i {
 .team figure figcaption {
   position: relative;
   background-color: var(--white-color);
-  padding: 8px 35px 15px;
+  padding: 8px 35px 35px;
   text-align: center;
 }
 .team figure figcaption h3 {
@@ -371,33 +439,23 @@ header .container .test i {
 }
 
 .sponser {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center;
-}
-.sponser img {
-  margin-bottom: var(--mb-32);
 }
 
 .project {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: var(--main-color);
 }
 .project h2 {
   font-size: 36px;
 }
-.project .button {
-  padding: 7px 20px;
-}
 
 .blog {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.blog .button {
-  width: 15%;
-  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .blog figure {
   transition: 0.2s ease-in-out;
@@ -427,6 +485,11 @@ header .container .test i {
   align-items: center;
   justify-content: space-around;
 }
+@media (max-width: 991.98px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
 .subscribe h3 {
   color: var(--main-color);
   font-weight: 500;
@@ -440,7 +503,7 @@ header .container .test i {
   outline: none;
 }
 .subscribe input[type=text] {
-  width: 40%;
+  width: 50%;
   padding: 13px;
   border-bottom: 1px solid var(--white-color);
   color: var(--white-color);
@@ -458,14 +521,19 @@ header .container .test i {
   font-size: 15px;
   text-align: center;
   transition: 0.5s ease-in-out;
+  margin-top: var(--mb-16);
 }
 
 footer {
   background-color: var(--main-color);
   padding: var(--mb-32);
+  font-size: 13px;
+}
+footer p {
+  font-size: 13px;
 }
 footer article {
-  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-64);
 }
 footer article span:first-of-type {
   color: var(--idenity-color-3);
@@ -482,15 +550,21 @@ footer article p:last-of-type {
 footer h5 {
   color: var(--white-color);
   margin-bottom: var(--mb-8);
+  font-size: 15px;
 }
 footer .list-sec {
   display: flex;
   justify-content: space-around;
+  margin-bottom: var(--mb-32);
+}
+@media (max-width: 767.98px) {
+  footer .list-sec {
+    justify-content: space-between;
+  }
 }
 footer .list-sec ul li a {
   display: block;
   color: var(--light-color);
-  font-size: var(--smaller-font-size);
   padding-bottom: var(--mb-16);
   text-transform: capitalize;
   transition: 0.5s ease-in-out;
@@ -499,18 +573,23 @@ footer .list-sec ul li a:hover {
   opacity: 0.7;
 }
 footer .button {
-  width: 80%;
+  font-size: 13px;
   margin-top: var(--mb-16);
 }
+@media (min-width: 768px) {
+  footer .button {
+    width: 80%;
+  }
+}
 footer .social-icons {
-  margin-top: var(--mb-16);
+  margin: 16px auto;
+  text-align: center;
 }
 footer .social-icons i {
   color: var(--white-color);
   font-size: 24px;
   width: 40px;
   height: 40px;
-  text-align: center;
   margin-left: 7px;
   padding: 7px;
   border-radius: 50%;

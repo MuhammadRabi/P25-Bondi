@@ -10,7 +10,7 @@
   padding-bottom: $sectionPadding;
 
   .feat-show {
-    margin-top: 100px;
+    margin-top: 150px;
     .feat-item {
       margin-bottom: 50px;
       text-align: center;
@@ -33,8 +33,9 @@
         color: var(--second-background-color);
         font-size: 150px;
         font-weight: bold;
-        top: -100px;
-        left: 155px;
+        top: -77px;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: -1;
       }
       i {
@@ -43,11 +44,14 @@
         margin-bottom: var(--mb-16);
       }
       h5 {
+        font-size: 20px;
         color: var(--yellow-color);
         font-weight: 600;
+        letter-spacing: 1.5px;
       }
       p {
         color: var(--lighter-color);
+        line-height: 1.6;
       }
     }
   }

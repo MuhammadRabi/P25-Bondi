@@ -40,12 +40,20 @@ a.button {
   display: block;
   background-color: var(--red-color);
   color: var(--yellow-color);
-  padding: 7px 25px;
+  padding: 8px 25px;
   cursor: pointer;
   border-radius: 15px;
   text-transform: capitalize;
   font-size: 15px;
   text-align: center;
+  width: 75%;
+  margin: auto;
+  @include media-breakpoint-up(lg) {
+    width: 15%;
+  }
+  @include media-breakpoint-only(md) {
+    width: 30%;
+  }
 }
 
 h2,
@@ -70,7 +78,6 @@ p {
 
 .main-heading {
   text-align: center;
-  width: 50%;
   margin: auto;
   i {
     color: var(--yellow-color);
@@ -79,18 +86,20 @@ p {
   }
   h2 {
     color: var(--main-color);
-    font-size: 35px;
+    font-size: var(--biggest-font-size);
   }
   p {
-    color: var(--light-color);
+    color: var(--lighter-color);
     position: relative;
     margin-bottom: var(--mb-64);
+    text-transform: uppercase;
     &:after {
       content: "";
       position: absolute;
       height: 1px;
       width: 200px;
-      left: 35%;
+      left: 50%;
+      transform: translateX(-50%);
       bottom: -20px;
       background-color: var(--idenity-color-1);
     }

@@ -13,12 +13,12 @@ $grid-breakpoints: (
 
 $mainTransition: 0.5s ease-in-out;
 $secondTransition: 0.2s ease-in-out;
-$sectionPadding: 50px;
-$contentMargin: 50px;
+$sectionPadding: 100px;
+$contentMargin: 100px;
 
 // responsive typography
 :root {
-  --biggest-font-size: 32px;
+  --biggest-font-size: 24px;
   --h2-font-size: 20px;
   --h3-font-size: 18px;
   --normal-font-size: 15px;
@@ -26,15 +26,13 @@ $contentMargin: 50px;
   --smaller-font-size: 14px;
 
   @media (min-width: 991px) {
-    --biggest-font-size: 48px;
+    --biggest-font-size: 36px;
     --h2-font-size: 28px;
     --h3-font-size: 20px;
     --normal-font-size: 18px;
     --small-font-size: 16px;
     --smaller-font-size: 14px;
   }
-
-  --capitalize: capitalize;
 
   --mb-8: 8px;
   --mb-12: 12px;

@@ -9,10 +9,14 @@
   padding-top: $sectionPadding;
   padding-bottom: $sectionPadding;
   article {
-    width: 100%;
+    width: 60%;
+    line-height: 1.4;
     margin: auto;
     text-align: center;
     color: var(--light-color);
+    @include media_breakpoint-down(lg) {
+      width: 100%;
+    }
   }
   .row {
     margin-top: var(--mb-100);
@@ -21,11 +25,19 @@
   }
   .content {
     padding: 10px 75px;
+    @include media_breakpoint-down(lg) {
+      padding: 10px 5px;
+    }
+    h2 {
+      font-weight: 600;
+    }
     p {
       margin-bottom: var(--mb-16);
     }
   }
   .button {
-    width: 30%;
+    @include media_breakpoint-up(md) {
+      width: 50%;
+    }
   }
 }

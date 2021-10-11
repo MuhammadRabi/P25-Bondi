@@ -8,8 +8,12 @@
 footer {
   background-color: var(--main-color);
   padding: var(--mb-32);
+  font-size: 13px;
+  p {
+    font-size: 13px;
+  }
   article {
-    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-64);
     span:first-of-type {
       color: var(--idenity-color-3);
     }
@@ -27,16 +31,20 @@ footer {
   h5 {
     color: var(--white-color);
     margin-bottom: var(--mb-8);
+    font-size: 15px;
   }
   .list-sec {
     display: flex;
     justify-content: space-around;
+    margin-bottom: var(--mb-32);
+    @include media_breakpoint_down(md) {
+      justify-content: space-between;
+    }
     ul {
       li {
         a {
           display: block;
           color: var(--light-color);
-          font-size: var(--smaller-font-size);
           padding-bottom: var(--mb-16);
           text-transform: capitalize;
           transition: $mainTransition;
@@ -48,17 +56,20 @@ footer {
     }
   }
   .button {
-    width: 80%;
+    font-size: 13px;
     margin-top: var(--mb-16);
+    @include media_breakpoint-up(md) {
+      width: 80%;
+    }
   }
   .social-icons {
-    margin-top: var(--mb-16);
+    margin: 16px auto;
+    text-align: center;
     i {
       color: var(--white-color);
       font-size: 24px;
       width: 40px;
       height: 40px;
-      text-align: center;
       margin-left: 7px;
       padding: 7px;
       border-radius: 50%;

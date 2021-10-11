@@ -13,6 +13,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @include media_breakpoint_down(lg) {
+      flex-direction: column;
+    }
   }
   h3 {
     color: var(--main-color);
@@ -27,7 +30,7 @@
     }
   }
   input[type="text"] {
-    width: 40%;
+    width: 50%;
     padding: 13px;
     border-bottom: 1px solid var(--white-color);
     color: var(--white-color);
@@ -45,5 +48,6 @@
     font-size: 15px;
     text-align: center;
     transition: $mainTransition;
+    margin-top: var(--mb-16);
   }
 }
