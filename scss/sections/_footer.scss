@@ -5,6 +5,8 @@
 @use "../components/mixins" as *;
 @use "../components/buttons" as *;
 
+// start footer
+
 footer {
   background-color: var(--main-color);
   padding: var(--mb-32);
@@ -88,5 +90,23 @@ footer {
         background-color: #ea4c89;
       }
     }
+  }
+}
+
+/* scroll to top btn */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: -60px;
+  font-size: 36px;
+  cursor: pointer;
+  transition: $secondTransition;
+  color: var(--yellow-color);
+  &:hover {
+    color: var(--red-color);
+    transform: translateY(-10px);
+  }
+  &.show {
+    right: 60px;
   }
 }

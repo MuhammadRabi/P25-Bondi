@@ -34,17 +34,22 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">home</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#" class="active" data-nav=".hero-area">home</a></li>
+                    <li><a href="#" data-nav=".project">services</a></li>
+                    <li><a href="#" data-nav=".make">portfolio</a></li>
+                    <li><a href="#" data-nav=".team">about</a></li>
+                    <li><a href="#" data-nav=".subscribe">contact</a></li>
                 </ul>
                 <div class="test">
                     <i class="fas fa-search"></i>
                     <a href="#" class="button">login</a>
                 </div>
             </nav>
+            <!-- menu toggle Button -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
         </div>
     </header>
     <!-- end navbar -->
@@ -430,6 +435,9 @@
             </div>
         </div>
     </footer>
+    <!-- scroll btn -->
+    <div class="scroll-to-top"><i class="far fa-caret-square-up"></i></div>
+    <!-- scroll btn -->
     <!-- end footer -->
     <!-- main script file-->
     <script src=" assets/js/script.js"></script>

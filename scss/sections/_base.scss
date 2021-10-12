@@ -47,12 +47,18 @@ a.button {
   font-size: 15px;
   text-align: center;
   width: 75%;
+  transition: $secondTransition;
   margin: auto;
   @include media-breakpoint-up(lg) {
     width: 15%;
   }
   @include media-breakpoint-only(md) {
     width: 30%;
+  }
+  &:hover {
+    transform: scale(1.01);
+    color: var(--red-color);
+    background-color: var(--yellow-color);
   }
 }
 

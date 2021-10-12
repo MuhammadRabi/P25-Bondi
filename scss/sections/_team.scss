@@ -5,6 +5,7 @@
 @use "../components/mixins" as *;
 @use "../components/buttons" as *;
 
+/* start team section */
 .team {
   padding-top: $sectionPadding;
   padding-bottom: $sectionPadding;
@@ -17,6 +18,9 @@
     width: 75%;
     margin: auto;
     text-align: center;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
   }
 
   figure {
@@ -39,7 +43,8 @@
       h3 {
         position: relative;
         color: var(--white-color);
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 1.5;
         z-index: 1;
       }
       p {

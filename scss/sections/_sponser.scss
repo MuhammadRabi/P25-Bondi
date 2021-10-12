@@ -5,8 +5,14 @@
 @use "../components/mixins" as *;
 @use "../components/buttons" as *;
 
+/* start sponser section */
 .sponser {
   padding-top: $sectionPadding;
   padding-bottom: $sectionPadding;
   text-align: center;
+  img {
+    @include media_breakpoint_down(md) {
+      margin-bottom: var(--mb-32);
+    }
+  }
 }
