@@ -18,6 +18,9 @@
     @include media_breakpoint_down(lg) {
       flex-direction: column;
     }
+    @include media_breakpoint_down(md) {
+      width: 100%;
+    }
   }
   h3 {
     color: var(--main-color);
@@ -39,6 +42,9 @@
     background-color: transparent;
     &::placeholder {
       color: var(--white-color);
+    }
+    @include media_breakpoint_down(md) {
+      width: 100%;
     }
   }
   input[type="submit"] {
