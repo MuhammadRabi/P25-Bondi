@@ -26,7 +26,7 @@ navToggle.addEventListener("click", () => {
   navBar.classList.toggle("active");
 });
 
-// navigation
+// navigation scroll to section
 
 let navListItems = document.querySelectorAll("header ul a");
 
@@ -44,6 +44,9 @@ function scrollToSection(navLinks) {
         top: sectionToGo,
         behaviour: "smooth",
       });
+      // closing mobile navbar during scrolling to section
+      navToggle.classList.toggle("active");
+      navBar.classList.toggle("active");
     });
   });
 }
