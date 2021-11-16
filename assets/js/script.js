@@ -1,3 +1,6 @@
+// AOS animation initialization
+AOS.init();
+
 let scrollBtn = document.querySelector(".scroll-to-top");
 // scroll to top BTN
 
@@ -52,6 +55,20 @@ function scrollToSection(navLinks) {
 }
 
 scrollToSection(navListItems);
+
+// search functionality
+const searchIcon = document.querySelector(".test i");
+const searchWindow = document.querySelector("header .overlay i");
+const searchOverlay = document.querySelector("header .overlay");
+
+console.log(searchOverlay);
+
+searchIcon.addEventListener("click", () => (searchOverlay.style.top = "0"));
+
+searchWindow.addEventListener(
+  "click",
+  () => (searchOverlay.style.top = "-100%")
+);
 
 // filter items logic
 let galleryLists = document.querySelectorAll(".gallery-list li a");

@@ -118,6 +118,42 @@ header {
       display: block;
     }
   }
+  .overlay {
+    @include overlay;
+    background-color: var(--yellow-color);
+    opacity: 0.95;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100%;
+    transition: $mainTransition;
+    input {
+      text-transform: capitalize;
+      border: transparent;
+      &:focus {
+        outline: none;
+      }
+    }
+    input[type="text"] {
+      width: 40%;
+      padding: 13px;
+      font-size: 48px;
+      border-bottom: 2px solid var(--white-color);
+      color: var(--black-color);
+      background-color: transparent;
+      &::placeholder {
+        color: var(--white-color);
+      }
+      @include media_breakpoint_down(md) {
+        width: 100%;
+      }
+    }
+    i {
+      font-size: 42px;
+      color: var(--white-color);
+      cursor: pointer;
+    }
+  }
 }
 
 /* start hero area */

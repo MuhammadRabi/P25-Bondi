@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Free Web tutorials showing how to build responsive web app using basic front end skills">
     <!-- Bootstrap 5.1.2 Grid -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.2/css/bootstrap-grid.min.css"
         integrity="sha512-0avv+MFzpKKnbCMUg8zcp8IPHHzJ88vGBSDj11Zebt8kMMnMQFZSgTlcybHaHaF+lX5ApypDuVPv0e5iu4w4dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- main compiled style-->
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- normalize.css file-->
@@ -51,13 +55,17 @@
                 <i class="fas fa-times"></i>
             </div>
         </div>
+        <div class="overlay"><input type="text" placeholder="enter your search words">
+            <i class="fas fa-search"></i>
+
+        </div>
     </header>
     <!-- end navbar -->
     <!-- Start hero area -->
     <section class="hero-area">
         <div class="overlay"></div>
         <div class="container">
-            <div class="hero-text">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
                 <h1>taste the creativity</h1>
                 <h5>we make awesome graphics and web design</h5>
                 <a href="#" class="button">get started</a>
@@ -76,7 +84,7 @@
             <div class="row feat-show">
                 <!-- item 01-->
                 <div class="col-lg-4">
-                    <div class="feat-item one">
+                    <div class="feat-item one" data-aos="flip-left">
                         <i class="fas fa-pencil-alt one"></i>
                         <h5>web design</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, accusantium. Quasi
@@ -85,7 +93,7 @@
                 </div>
                 <!-- item 02-->
                 <div class="col-lg-4">
-                    <div class="feat-item two">
+                    <div class="feat-item two" data-aos="flip-left">
                         <i class="fas fa-desktop two"></i>
                         <h5>web design</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, accusantium. Quasi
@@ -94,7 +102,7 @@
                 </div>
                 <!-- item 03-->
                 <div class="col-lg-4">
-                    <div class="feat-item three">
+                    <div class="feat-item three" data-aos="flip-left">
                         <i class="fas fa-plug three"></i>
                         <h5>web design</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, accusantium. Quasi
@@ -122,7 +130,7 @@
                 <li><a href="#" data-make=".app">app</a></li>
                 <li><a href="#" data-make=".photo">photo</a></li>
             </ul>
-            <div class="row gallery">
+            <div class="row gallery" data-aos="flip-up">
                 <!-- item 01 -->
                 <div class="col-md-3">
                     <figure class="all design">
@@ -206,7 +214,8 @@
                 ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.</article>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="content">
+                    <div class="content" data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                        data-aos-duration="500">
                         <h2>retina design</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dignissimos quos odio
                             laudantium
@@ -218,26 +227,29 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/Vector MacBook.png" alt="retina" class="img-fluid">
+                    <img src="images/Vector MacBook.png" alt="retina" class="img-fluid" data-aos="fade-left"
+                        data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
                 </div>
             </div>
         </div>
     </section>
     <!-- end stuff section -->
     <!-- start meet team section -->
-    <section class="team">
+    <section class=" team">
         <div class="container">
             <div class="main-heading">
                 <h2>meet the team</h2>
             </div>
-            <p>Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+            <p>Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh
+                pulvinar a.
                 Pellentesque in
-                ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.</p>
+                ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.
+            </p>
             <!-- team cards -->
             <div class="row">
                 <!-- team 01 -->
                 <div class="col-sm-6 col-lg-3">
-                    <figure>
+                    <figure data-aos="zoom-in-down">
                         <img src="images/team01.jpg" alt="team01" class="img-fluid">
                         <figcaption>
                             <div class="overlay"></div>
@@ -248,7 +260,7 @@
                 </div>
                 <!-- team 02 -->
                 <div class="col-sm-6 col-lg-3">
-                    <figure>
+                    <figure data-aos="zoom-in-down">
                         <img src="images/team02.jpg" alt="team01" class="img-fluid">
                         <figcaption>
                             <div class="overlay"></div>
@@ -259,7 +271,7 @@
                 </div>
                 <!-- team 03 -->
                 <div class="col-sm-6 col-lg-3">
-                    <figure>
+                    <figure data-aos="zoom-in-down">
                         <img src="images/team03.jpg" alt="team01" class="img-fluid">
                         <figcaption>
                             <div class="overlay"></div>
@@ -270,7 +282,7 @@
                 </div>
                 <!-- team 04 -->
                 <div class="col-sm-6 col-lg-3">
-                    <figure>
+                    <figure data-aos="zoom-in-down">
                         <img src="images/team04.jpg" alt="team01" class="img-fluid">
                         <figcaption>
                             <div class="overlay"></div>
@@ -319,7 +331,7 @@
     <!-- start project section -->
     <section class="project">
         <div class="container">
-            <div class="hero-text">
+            <div class="hero-text" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                 <h2>taste the creativity</h2>
                 <h5>we make awesome graphics and web design</h5>
                 <a href="#" class="button">start project</a>
@@ -439,6 +451,8 @@
     <div class="scroll-to-top"><i class="far fa-caret-square-up"></i></div>
     <!-- scroll btn -->
     <!-- end footer -->
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- main script file-->
     <script src=" assets/js/script.js"></script>
 </body>

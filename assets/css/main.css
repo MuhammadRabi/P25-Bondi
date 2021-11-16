@@ -269,6 +269,51 @@ header .menu-toggle.active i:nth-of-type(2) {
     display: block;
   }
 }
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow-color);
+  opacity: 0.95;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -100%;
+  transition: 0.5s ease-in-out;
+}
+header .overlay input {
+  text-transform: capitalize;
+  border: transparent;
+}
+header .overlay input:focus {
+  outline: none;
+}
+header .overlay input[type=text] {
+  width: 40%;
+  padding: 13px;
+  font-size: 48px;
+  border-bottom: 2px solid var(--white-color);
+  color: var(--black-color);
+  background-color: transparent;
+}
+header .overlay input[type=text]::placeholder {
+  color: var(--white-color);
+}
+@media (max-width: 767.98px) {
+  header .overlay input[type=text] {
+    width: 100%;
+  }
+}
+header .overlay i {
+  font-size: 42px;
+  color: var(--white-color);
+  cursor: pointer;
+}
 
 /* start hero area */
 .hero-area {
@@ -287,6 +332,9 @@ header .menu-toggle.active i:nth-of-type(2) {
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(25, 40, 63, 0.9);
 }
 
@@ -419,6 +467,9 @@ header .menu-toggle.active i:nth-of-type(2) {
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   transition: 0.5s ease-in-out;
 }
@@ -519,6 +570,9 @@ header .menu-toggle.active i:nth-of-type(2) {
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #33d1cc;
   height: 40px;
   width: 100%;
